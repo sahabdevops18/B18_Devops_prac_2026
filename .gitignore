@@ -1,0 +1,8 @@
+*.tfvars
+.tfstate
+*.tfstate*
+*.tfvars.json
+crash.log
+crash.*.log
+git remote add origin.terraform
+.terraform.lock.hcl

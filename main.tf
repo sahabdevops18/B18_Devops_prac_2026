@@ -1,13 +1,13 @@
 # 1. Resource Group
-resource "azurerm_resource_group" "rg1"{
+resource "azurerm_resource_group" "testrg1" {
   name     = "Sahabrg1"
   location = "central india"
 }
 # 2. Storage Account
 resource "azurerm_storage_account" "storage" {
   name                     = "sahabstorage2026" # Must be globally unique, lowercase letters and numbers only
-  resource_group_name      = azurerm_resource_group.rg1name
-  location                 = azurerm_resource_group.rg1location
+  resource_group_name      = azurerm_resource_group.testrg1.name
+  location                 = azurerm_resource_group.testrg1.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
   tags = {
